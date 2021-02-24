@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <title>簡単グループ分け（無料）</title>
+       <meta name="description" content="簡単にグループ分けができます">
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    </head>
+    <body>
+        <section class="hero is-link">
+            <div class="hero-body">
+                <p class="title is-4">グループ分け</p>
+                <p>ランダムにグループ分けを行います。</p>
+                <p>同じ部署の人はなるべく別のグループにしたい、というときは名前の後にカンマ区切りで部署名を入れてください。</p>
+            </div>
+        </section>
+        <div class="container p-5">
+            <div class="field">
+                <label class="label">メンバー</label>
+                <div class="control">
+                    <textarea id="input" class="textarea" placeholder="田中太郎,経理部"></textarea>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">グループの数</label>
+                <div class="control">
+                    <input id="num-groups" class="input" type="number" value="4">
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <button class="button is-link" id="submit">グループ分け</button>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">結果</label>
+                <div class="control">
+                    <textarea id="output" class="textarea" placeholder="グループ1,田中太郎"></textarea>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="./main.js" defer></script>
+    </body>
+</html>
