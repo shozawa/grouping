@@ -25,7 +25,9 @@ function toCSV(matrix) {
 
 function group(members, numGroups) {
   const copy = members.slice();
-  copy.sort((a, b) => a.relationship.localeCompare(b.relationship));
+  copy.sort((a, b) => {
+    a.relationship.localeCompare(b.relationship);
+  });
 
   return chunk(copy, numGroups);
 }
@@ -47,7 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const csv = parseCSV(textarea.value);
 
     const members = csv.map((row) => {
-      const [name, relationship] = row;
+      let [name, relationship] = row;
+      relationship = relationship || "";
       return { name, relationship };
     });
 
