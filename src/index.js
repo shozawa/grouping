@@ -16,7 +16,7 @@ function parseCSV(string) {
   return string
     .split("\n")
     .filter((row) => !isWhitespace(row))
-    .map((row) => row.split(","));
+    .map((row) => row.split(/,|\t/));
 }
 
 function toCSV(matrix) {
