@@ -1,4 +1,5 @@
 import { times, shuffle } from "lodash";
+import "./style.sass";
 
 function chunk(array, numGroups) {
   const dist = times(numGroups, () => []);

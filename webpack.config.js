@@ -11,6 +11,11 @@ module.exports = {
   plugins: [new webpack.ProgressPlugin()],
 
   module: {
-    rules: [],
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
+    ],
   },
 };
