@@ -1,13 +1,6 @@
-import { times, shuffle } from "lodash";
+import { shuffle } from "lodash";
+import { chunk } from "./tools";
 import "./style.sass";
-
-function chunk(array, numGroups) {
-  const dist = times(numGroups, () => []);
-  array.forEach((elm, index) => {
-    dist[index % numGroups].push(elm);
-  });
-  return dist;
-}
 
 function isWhitespace(text) {
   return /^\s*$/.test(text);
