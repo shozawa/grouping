@@ -19,10 +19,7 @@ function toCSV(matrix) {
 
 function group(members, numGroups) {
   const copy = members.slice();
-  copy.sort((a, b) => {
-    a.relationship.localeCompare(b.relationship);
-  });
-
+  copy.sort((a, b) => a.relationship.localeCompare(b.relationship));
   return chunk(copy, numGroups);
 }
 
